@@ -1,0 +1,25 @@
+<!--filename: index.html-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello, world!</title>
+        <meta name="viewport"contet="initial-scale=1.0,user-scalable=no">
+        <meta charset="utf-8">
+        <style>html,body,#map_canvas{height:100%;margin:0px;padding:0%}</style>
+        <script src="https://googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCFaDT85Q4dnV7kZiWlxCxN10vXvFYuGpQ"></script>
+        <script>
+        var map;
+        function initilize(){
+            var mapOptions={
+                zoom:12,
+                center:new google.maps.LatLng(40.758909,-73.985128)
+            };
+            map=new google.maps.Map(document.getElementById('map_canvas'),mapOptions);
+        }
+        google.maps.event.addDomListener(window,'load',initilize);
+        </script>
+    </head>
+    <body>
+        <div id="map_canvas"></div>
+    </body>
+</html>
